@@ -1,3 +1,3 @@
-#testing-with-jest
+# testing-with-jest
 A lab about Jest + npm
 
