@@ -50,6 +50,6 @@ describe('Clicking "Poppa stacken"', () => {
         await alert2.accept();
 
         let stack = await driver.findElement(By.id('top_of_stack')).getText();
-        expect(stack).toEqual("n/a"); // Fel med flit 
+        expect(stack).toEqual("Cat"); 
     });
 });

@@ -23,7 +23,7 @@ test('pop removes top element', () => {
     stack.push("Two");
     stack.push("Three");
     expect(stack.pop()).toBe('Three'); 
-    expect(stack.peek()).toBe('Cat'); // Fel med flit 
+    expect(stack.peek()).toBe('Two'); 
 });
 
 test('peek on stack after popping two elements', () => {
@@ -32,5 +32,5 @@ test('peek on stack after popping two elements', () => {
     stack.push("Three");
     stack.pop();
     expect(stack.pop()).toBe('Two'); 
-    expect(stack.peek()).toBe('Catto'); // Fel med flit 
+    expect(stack.peek()).toBe('One'); 
 });
