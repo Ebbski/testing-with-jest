@@ -34,3 +34,22 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+
+describe('Clicking "Poppa stacken"', () => {
+    it('should remove the stack´s top element', async () => {
+        let push = await driver.findElement(By.id('push'));
+        await push.click();
+        let alert = await driver.switchTo().alert();
+        await alert.sendKeys("Cat");
+        await alert.accept();
+
+        let pop = await driver.findElement(By.id('pop'));
+        await pop.click();
+        let alert2 = await driver.switchTo().alert();
+        await alert2.accept();
+
+        let stack = await driver.findElement(By.id('top_of_stack')).getText();
+        expect(stack).toEqual("n/a"); // Fel med flit 
+    });
+});
